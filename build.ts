@@ -5,7 +5,6 @@ import postcss from 'postcss'
 import nested from 'postcss-nested'
 import autoprefixer from 'autoprefixer'
 import stripIndent from 'strip-indent'
-import themes from 'daisyui/src/colors/themes'
 import functions from 'daisyui/src/colors/functions'
 import {replacePrefix, replaceSlash, writeIndex} from './utils.ts'
 
@@ -15,8 +14,8 @@ const root = 'daisyui/src'
 const stripRoot = (path: string) => path.replace(`${Deno.cwd()}/${root}/`, '')
 
 // Utilities should go last
-const dirs = ['base', 'themes', 'components', 'utilities']
-const [baseDir, themesDir, ...styleDirs] = dirs
+const dirs = ['base', 'components', 'utilities']
+const [baseDir, ...styleDirs] = dirs
 
 /* Root index */
 if (existsSync('./index.css')) {
@@ -76,46 +75,3 @@ for (const dir of styleDirs) {
 	for (const name of [...ordered.filter(Boolean), ...unordered])
 		writeIndex(dir, `${name}/index.css`)
 }
-
-/* `themes` */
-const auto = new Map<string, string>()
-const autoCss = 'auto.css'
-
-writeIndex(themesDir, autoCss)
-
-for (const [selector, theme] of Object.entries(themes)) {
-	const [, name] = /\[data-theme=(.+)]/.exec(selector)!
-	const vars = functions.convertToHsl(theme)
-	const css = stripIndent(`
-		${selector} {
-			${Object.entries(vars)
-				// UnoCSS transforms `hsl(var(--foo))` to `hsla(var(--foo), var(--un-bar))`
-				// So replace space separator with comma
-				.map(([prop, value]) =>
-					[prop, (value as string).replaceAll(' ', ', ')].join(': '),
-				)
-				.join(';\n\t\t\t')};
-		}
-	`).trim()
-
-	const file = `${name}.css`
-	const dest = `${themesDir}/${file}`
-
-	console.log('Writing', dest)
-	Deno.writeTextFileSync(dest, css)
-	writeIndex(themesDir, file)
-
-	if (name === 'dark' || name === 'light')
-		auto.set(name, css.replace(selector, ':root'))
-}
-
-/* `auto` theme */
-const autoDest = `${themesDir}/${autoCss}`
-console.log('Writing', autoDest)
-Deno.writeTextFileSync(
-	autoDest,
-	// Dark style should go after light style
-	`${auto.get('light')}\n@media (prefers-color-scheme: dark) {\n${auto.get(
-		'dark',
-	)}\n}`,
-)
