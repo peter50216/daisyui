@@ -1,0 +1,80 @@
+.steps {
+  /* &-vertical{
+    .step {
+      gap: .5rem;
+      grid-template-columns: 40px 1fr;
+      grid-template-rows: auto;
+      min-height: 4rem;
+      justify-items: start;
+      &:before {
+        @apply w-2 h-full top-0 transform -translate-y-1/2 -translate-x-1/2;
+        margin-left: 50%;
+      }
+    }
+  } */
+}
+  /* &,
+  &-horizontal{ */
+  .steps .step {
+    grid-template-rows: 40px 1fr;
+    grid-template-columns: auto;
+    min-width: 4rem;
+  }
+  .steps .step:before {
+      @apply top-0 col-start-1 row-start-1 h-2 w-full transform bg-base-300 text-base-content;
+      content: "";
+      margin-left: -100%;
+    }
+  /* } */
+  .steps .step:after {
+      content: counter(step);
+      counter-increment: step;
+      z-index: 1;
+      @apply relative col-start-1 row-start-1 grid h-8 w-8 place-items-center place-self-center rounded-full bg-base-300 text-base-content;
+    }
+  .steps .step:first-child:before {
+      content: none;
+    }
+  .steps .step[data-content]:after {
+      content: attr(data-content);
+    }
+  .steps .step-neutral + .step-neutral:before,
+  .steps .step-neutral:after {
+    @apply bg-neutral text-neutral-content;
+  }
+  .steps .step-primary + .step-primary:before,
+  .steps .step-primary:after {
+    @apply bg-primary text-primary-content;
+  }
+  .steps .step-secondary + .step-secondary:before,
+  .steps .step-secondary:after {
+    @apply bg-secondary text-secondary-content;
+  }
+  .steps .step-accent + .step-accent:before,
+  .steps .step-accent:after {
+    @apply bg-accent text-accent-content;
+  }
+  .steps .step-info + .step-info:before {
+    @apply bg-info;
+  }
+  .steps .step-info:after {
+    @apply bg-info text-info-content;
+  }
+  .steps .step-success + .step-success:before {
+    @apply bg-success;
+  }
+  .steps .step-success:after {
+    @apply bg-success text-success-content;
+  }
+  .steps .step-warning + .step-warning:before {
+    @apply bg-warning;
+  }
+  .steps .step-warning:after {
+    @apply bg-warning text-warning-content;
+  }
+  .steps .step-error + .step-error:before {
+    @apply bg-error;
+  }
+  .steps .step-error:after {
+    @apply bg-error text-error-content;
+  }

@@ -1,0 +1,69 @@
+.input {
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base;
+  /* &::-webkit-calendar-picker-indicator {
+    display: none;
+  } */
+}
+  .input[list]::-webkit-calendar-picker-indicator {
+    line-height: 1em;
+  }
+  .input-bordered {
+    @apply border-opacity-20;
+  }
+  .input:focus {
+    outline: 2px solid hsla(var(--bc), 0.2);
+    outline-offset: 2px;
+  }
+  .input-ghost {
+    @apply bg-opacity-5;
+  }
+  .input-ghost:focus {
+      @apply bg-opacity-100 text-base-content;
+      box-shadow: none;
+    }
+  .input-primary {
+    @apply border-primary;
+  }
+  .input-primary:focus {
+      outline: 2px solid hsl(var(--p));
+    }
+  .input-secondary {
+    @apply border-secondary;
+  }
+  .input-secondary:focus {
+      outline: 2px solid hsl(var(--s));
+    }
+  .input-accent {
+    @apply border-accent;
+  }
+  .input-accent:focus {
+      outline: 2px solid hsl(var(--a));
+    }
+  .input-info {
+    @apply border-info;
+  }
+  .input-info:focus {
+      outline: 2px solid hsl(var(--in));
+    }
+  .input-success {
+    @apply border-success;
+  }
+  .input-success:focus {
+      outline: 2px solid hsl(var(--su));
+    }
+  .input-warning {
+    @apply border-warning;
+  }
+  .input-warning:focus {
+      outline: 2px solid hsl(var(--wa));
+    }
+  .input-error {
+    @apply border-error;
+  }
+  .input-error:focus {
+      outline: 2px solid hsl(var(--er));
+    }
+  .input-disabled,
+  .input[disabled] {
+    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+  }

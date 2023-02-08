@@ -1,0 +1,138 @@
+.checkbox {
+  --chkbg: var(--bc);
+  --chkfg: var(--b1);
+  @apply h-6 w-6 cursor-pointer appearance-none border border-base-content border-opacity-20 rounded-btn;
+}
+  .checkbox:focus-visible {
+    outline: 2px solid hsl(var(--bc));
+    outline-offset: 2px;
+  }
+  .checkbox:checked,
+  .checkbox[checked="true"],
+  .checkbox[aria-checked="true"] {
+    @apply bg-base-content bg-no-repeat;
+    animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+    background-image: linear-gradient(-45deg, transparent 65%, hsl(var(--chkbg)) 65.99%), linear-gradient(45deg, transparent 75%, hsl(var(--chkbg)) 75.99%), linear-gradient(-45deg, hsl(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(45deg, hsl(var(--chkbg)) 30%, hsl(var(--chkfg)) 30.99%, hsl(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(-45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+  }
+  .checkbox:indeterminate {
+    @apply bg-base-content bg-no-repeat;
+    animation: checkmark var(--animation-input, 0.2s) ease-in-out;
+    background-image: linear-gradient(90deg, transparent 80%, hsl(var(--chkbg)) 80%), linear-gradient(-90deg, transparent 80%, hsl(var(--chkbg)) 80%), linear-gradient(0deg, hsl(var(--chkbg)) 43%, hsl(var(--chkfg)) 43%, hsl(var(--chkfg)) 57%, hsl(var(--chkbg)) 57%);
+  }
+  .checkbox-primary {
+    --chkbg: var(--p);
+    --chkfg: var(--pc);
+    @apply border-primary hover:border-primary;
+  }
+  .checkbox-primary:focus-visible {
+      outline: 2px solid hsl(var(--p));
+    }
+  .checkbox-primary:checked,
+    .checkbox-primary[checked="true"],
+    .checkbox-primary[aria-checked="true"] {
+      @apply border-primary bg-primary text-primary-content;
+    }
+  .checkbox-secondary {
+    --chkbg: var(--s);
+    --chkfg: var(--sc);
+    @apply border-secondary hover:border-secondary;
+  }
+  .checkbox-secondary:focus-visible {
+      outline: 2px solid hsl(var(--s));
+    }
+  .checkbox-secondary:checked,
+    .checkbox-secondary[checked="true"],
+    .checkbox-secondary[aria-checked="true"] {
+      @apply border-secondary bg-secondary text-secondary-content;
+    }
+  .checkbox-accent {
+    --chkbg: var(--a);
+    --chkfg: var(--ac);
+    @apply border-accent hover:border-accent;
+  }
+  .checkbox-accent:focus-visible {
+      outline: 2px solid hsl(var(--a));
+    }
+  .checkbox-accent:checked,
+    .checkbox-accent[checked="true"],
+    .checkbox-accent[aria-checked="true"] {
+      @apply border-accent bg-accent text-accent-content;
+    }
+  .checkbox-success {
+    --chkbg: var(--su);
+    --chkfg: var(--suc);
+    @apply border-success hover:border-success;
+  }
+  .checkbox-success:focus-visible {
+      outline: 2px solid hsl(var(--su));
+    }
+  .checkbox-success:checked,
+    .checkbox-success[checked="true"],
+    .checkbox-success[aria-checked=true] {
+      @apply border-success bg-success text-success-content;
+    }
+  .checkbox-warning {
+    --chkbg: var(--wa);
+    --chkfg: var(--wac);
+    @apply border-warning hover:border-warning;
+  }
+  .checkbox-warning:focus-visible {
+      outline: 2px solid hsl(var(--wa));
+    }
+  .checkbox-warning:checked,
+    .checkbox-warning[checked="true"],
+    .checkbox-warning[aria-checked=true] {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  .checkbox-info {
+    --chkbg: var(--in);
+    --chkfg: var(--inc);
+    @apply border-info hover:border-info;
+  }
+  .checkbox-info:focus-visible {
+      outline: 2px solid hsl(var(--in));
+    }
+  .checkbox-info:checked,
+    .checkbox-info[checked="true"],
+    .checkbox-info[aria-checked=true] {
+      @apply border-info bg-info text-info-content;
+    }
+  .checkbox-error {
+    --chkbg: var(--er);
+    --chkfg: var(--erc);
+    @apply border-error hover:border-error;
+  }
+  .checkbox-error:focus-visible {
+      outline: 2px solid hsl(var(--er));
+    }
+  .checkbox-error:checked,
+    .checkbox-error[checked="true"],
+    .checkbox-error[aria-checked=true] {
+      @apply border-error bg-error text-error-content;
+    }
+  .checkbox:disabled {
+    @apply cursor-not-allowed border-transparent bg-base-content opacity-20;
+  }
+
+@keyframes checkmark {
+  0% {
+    background-position-y: 5px;
+  }
+  50% {
+    background-position-y: -2px;
+  }
+  100% {
+    background-position-y: 0;
+  }
+}
+
+/* backward comptability */
+.checkbox-mark {
+  @apply hidden;
+}
+
+[dir="rtl"] .checkbox:checked,
+    [dir="rtl"] .checkbox[checked="true"],
+    [dir="rtl"] .checkbox[aria-checked="true"] {
+      background-image: linear-gradient(45deg, transparent 65%, hsl(var(--chkbg)) 65.99%), linear-gradient(-45deg, transparent 75%, hsl(var(--chkbg)) 75.99%), linear-gradient(45deg, hsl(var(--chkbg)) 40%, transparent 40.99%), linear-gradient(-45deg, hsl(var(--chkbg)) 30%, hsl(var(--chkfg)) 30.99%, hsl(var(--chkfg)) 40%, transparent 40.99%), linear-gradient(45deg, hsl(var(--chkfg)) 50%, hsl(var(--chkbg)) 50.99%);
+    }

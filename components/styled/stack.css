@@ -1,0 +1,15 @@
+.stack {
+  @apply place-items-center items-end;
+}
+  .stack > * {
+    @apply w-full;
+  }
+  .stack > * {
+    @apply opacity-60;
+  }
+  .stack > *:nth-child(2) {
+    @apply opacity-80;
+  }
+  .stack > *:nth-child(1) {
+    @apply opacity-100;
+  }

@@ -1,0 +1,36 @@
+.btm-nav-xs {
+    @apply h-10;
+  }
+    .btm-nav-xs>*:where(.active) {
+      @apply border-t-[1px];
+    }
+    .btm-nav-xs .btm-nav-label {
+      @apply text-xs;
+    }
+  .btm-nav-sm {
+    @apply h-12;
+  }
+  .btm-nav-sm>*:where(.active) {
+      @apply border-t-2;
+    }
+  .btm-nav-sm .btm-nav-label {
+      @apply text-xs;
+    }
+  .btm-nav-md {
+    @apply h-16;
+  }
+  .btm-nav-md>*:where(.active) {
+      @apply border-t-2;
+    }
+  .btm-nav-md .btm-nav-label {
+      @apply text-sm;
+    }
+  .btm-nav-lg {
+    @apply h-20;
+  }
+  .btm-nav-lg>*:where(.active) {
+      @apply border-t-4;
+    }
+  .btm-nav-lg .btm-nav-label {
+      @apply text-base;
+    }

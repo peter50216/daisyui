@@ -1,0 +1,131 @@
+.badge {
+  @apply border border-neutral bg-neutral text-neutral-content rounded-badge;
+}
+  .badge-primary {
+    @apply border-primary bg-primary text-primary-content;
+  }
+  .badge-secondary {
+    @apply border-secondary bg-secondary text-secondary-content;
+  }
+  .badge-accent {
+    @apply border-accent bg-accent text-accent-content;
+  }
+  .badge-info {
+    @apply border-transparent bg-info text-info-content;
+  }
+  .badge-success {
+    @apply border-transparent bg-success text-success-content;
+  }
+  .badge-warning {
+    @apply border-transparent bg-warning text-warning-content;
+  }
+  .badge-error {
+    @apply border-transparent bg-error text-error-content;
+  }
+  .badge-ghost {
+    @apply border-base-200 bg-base-200 text-base-content;
+  }
+  .badge-outline {
+    @apply border-current border-opacity-50 bg-transparent text-current;
+  }
+  .badge-outline.badge-primary {
+      @apply text-primary;
+    }
+  .badge-outline.badge-secondary {
+      @apply text-secondary;
+    }
+  .badge-outline.badge-accent {
+      @apply text-accent;
+    }
+  .badge-outline.badge-info {
+      @apply text-info;
+    }
+  .badge-outline.badge-success {
+      @apply text-success;
+    }
+  .badge-outline.badge-warning {
+      @apply text-warning;
+    }
+  .badge-outline.badge-error {
+      @apply text-error;
+    }
+
+.btn-outline .badge {
+    @apply border-neutral-focus text-neutral-content;
+  }
+
+.btn-outline.btn-primary .badge {
+    @apply border-primary bg-primary text-primary-content;
+  }
+
+.btn-outline.btn-secondary .badge {
+    @apply border-secondary bg-secondary text-secondary-content;
+  }
+
+.btn-outline.btn-accent .badge {
+    @apply border-accent bg-accent text-accent-content;
+  }
+
+.btn-outline .badge.outline {
+    @apply border-neutral-focus bg-transparent;
+  }
+
+.btn-outline.btn-primary .badge-outline {
+    @apply border-primary bg-transparent text-primary;
+  }
+
+.btn-outline.btn-secondary .badge-outline {
+    @apply border-secondary bg-transparent text-secondary;
+  }
+
+.btn-outline.btn-accent .badge-outline {
+    @apply border-accent bg-transparent text-accent;
+  }
+
+.btn-outline.btn-info .badge-outline {
+    @apply border-info bg-transparent text-info;
+  }
+
+.btn-outline.btn-success .badge-outline {
+    @apply border-success bg-transparent text-success;
+  }
+
+.btn-outline.btn-warning .badge-outline {
+    @apply border-warning bg-transparent text-warning;
+  }
+
+.btn-outline.btn-error .badge-outline {
+    @apply border-error bg-transparent text-error;
+  }
+
+.btn-outline:hover .badge {
+    @apply border-base-200 bg-base-200 text-base-content;
+  }
+
+.btn-outline:hover .badge.outline {
+      @apply border-base-200 text-neutral-content;
+    }
+
+.btn-outline.btn-primary:hover .badge {
+    @apply border-primary-content bg-primary-content text-primary;
+  }
+
+.btn-outline.btn-primary:hover .badge.outline {
+      @apply border-primary-content bg-primary-focus text-primary-content;
+    }
+
+.btn-outline.btn-secondary:hover .badge {
+    @apply border-secondary-content bg-secondary-content text-secondary;
+  }
+
+.btn-outline.btn-secondary:hover .badge.outline {
+      @apply border-secondary-content bg-secondary-focus text-secondary-content;
+    }
+
+.btn-outline.btn-accent:hover .badge {
+    @apply border-accent-content bg-accent-content text-accent;
+  }
+
+.btn-outline.btn-accent:hover .badge.outline {
+      @apply border-accent-content bg-accent-focus text-accent-content;
+    }

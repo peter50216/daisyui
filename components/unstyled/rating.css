@@ -1,0 +1,6 @@
+.rating {
+  @apply relative inline-flex;
+}
+  .rating :where(input) {
+    @apply cursor-pointer rounded-none;
+  }

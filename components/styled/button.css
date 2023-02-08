@@ -1,0 +1,225 @@
+.btn {
+  @apply font-semibold uppercase no-underline;
+  border-width: var(--border-btn, 1px);
+  animation: button-pop var(--animation-btn, 0.25s) ease-out;
+  text-transform: var(--btn-text-case, uppercase);
+}
+  .btn:active:hover,
+  .btn:active:focus {
+    animation: none;
+  }
+  .btn:active:hover,
+  .btn:active:focus {
+    transform: scale(var(--btn-focus-scale, 0.95));
+  }
+  /* default btn */
+  .btn {
+    @apply border-neutral bg-neutral text-neutral-content no-underline;
+  }
+  .btn:hover,
+    .btn-active {
+      @apply border-neutral-focus bg-neutral-focus;
+    }
+  .btn:focus-visible {
+      outline: 2px solid hsl(var(--nf));
+      outline-offset: 2px;
+    }
+  /* brand colors */
+  .btn-primary {
+    @apply border-primary bg-primary text-primary-content;
+  }
+  .btn-primary:hover,
+    .btn-primary.btn-active {
+      @apply border-primary-focus bg-primary-focus;
+    }
+  .btn-primary:focus-visible {
+      outline: 2px solid hsl(var(--p));
+    }
+  .btn-secondary {
+    @apply border-secondary bg-secondary text-secondary-content;
+  }
+  .btn-secondary:hover,
+    .btn-secondary.btn-active {
+      @apply border-secondary-focus bg-secondary-focus;
+    }
+  .btn-secondary:focus-visible {
+      outline: 2px solid hsl(var(--s));
+    }
+  .btn-accent {
+    @apply border-accent bg-accent text-accent-content;
+  }
+  .btn-accent:hover,
+    .btn-accent.btn-active {
+      @apply border-accent-focus bg-accent-focus;
+    }
+  .btn-accent:focus-visible {
+      outline: 2px solid hsl(var(--a));
+    }
+  /* btn with state colors */
+  .btn-info {
+    @apply border-info bg-info text-info-content;
+  }
+  .btn-info:hover,
+    .btn-info.btn-active {
+      @apply border-info bg-info;
+    }
+  .btn-info:focus-visible {
+      outline: 2px solid hsl(var(--in));
+    }
+  .btn-success {
+    @apply border-success bg-success text-success-content;
+  }
+  .btn-success:hover,
+    .btn-success.btn-active {
+      @apply border-success bg-success;
+    }
+  .btn-success:focus-visible {
+      outline: 2px solid hsl(var(--su));
+    }
+  .btn-warning {
+    @apply border-warning bg-warning text-warning-content;
+  }
+  .btn-warning:hover,
+    .btn-warning.btn-active {
+      @apply border-warning bg-warning;
+    }
+  .btn-warning:focus-visible {
+      outline: 2px solid hsl(var(--wa));
+    }
+  .btn-error {
+    @apply border-error bg-error text-error-content;
+  }
+  .btn-error:hover,
+    .btn-error.btn-active {
+      @apply border-error bg-error;
+    }
+  .btn-error:focus-visible {
+      outline: 2px solid hsl(var(--er));
+    }
+  /* glass */
+  .btn.glass:hover,
+    .btn.glass.btn-active {
+      --glass-opacity: 25%;
+      --glass-border-opacity: 15%;
+    }
+  .btn.glass:focus-visible {
+      outline: 2px solid currentColor;
+    }
+  /* btn variants */
+  .btn-ghost {
+    @apply border border-transparent bg-transparent text-current;
+  }
+  .btn-ghost:hover,
+    .btn-ghost.btn-active {
+      @apply border-opacity-0 bg-base-content bg-opacity-20;
+    }
+  .btn-ghost:focus-visible {
+      outline: 2px solid currentColor;
+    }
+  .btn-link {
+    @apply border-transparent bg-transparent text-primary underline;
+  }
+  .btn-link:hover,
+    .btn-link.btn-active {
+      @apply border-transparent bg-transparent underline;
+    }
+  .btn-link:focus-visible {
+      outline: 2px solid currentColor;
+    }
+  /* outline */
+  .btn-outline {
+    @apply border-current bg-transparent text-base-content;
+  }
+  .btn-outline:hover,
+    .btn-outline.btn-active {
+      @apply border-base-content bg-base-content text-base-100;
+    }
+  .btn-outline.btn-primary {
+      @apply text-primary;
+    }
+  .btn-outline.btn-primary:hover,
+      .btn-outline.btn-primary.btn-active {
+        @apply border-primary-focus bg-primary-focus text-primary-content;
+      }
+  .btn-outline.btn-secondary {
+      @apply text-secondary;
+    }
+  .btn-outline.btn-secondary:hover,
+      .btn-outline.btn-secondary.btn-active {
+        @apply border-secondary-focus bg-secondary-focus text-secondary-content;
+      }
+  .btn-outline.btn-accent {
+      @apply text-accent;
+    }
+  .btn-outline.btn-accent:hover,
+      .btn-outline.btn-accent.btn-active {
+        @apply border-accent-focus bg-accent-focus text-accent-content;
+      }
+  .btn-outline.btn-success {
+      @apply text-success;
+    }
+  .btn-outline.btn-success:hover,
+      .btn-outline.btn-success.btn-active {
+        @apply border-success bg-success text-success-content;
+      }
+  .btn-outline.btn-info {
+      @apply text-info;
+    }
+  .btn-outline.btn-info:hover,
+      .btn-outline.btn-info.btn-active {
+        @apply border-info bg-info text-info-content;
+      }
+  .btn-outline.btn-warning {
+      @apply text-warning;
+    }
+  .btn-outline.btn-warning:hover,
+      .btn-outline.btn-warning.btn-active {
+        @apply border-warning bg-warning text-warning-content;
+      }
+  .btn-outline.btn-error {
+      @apply text-error;
+    }
+  .btn-outline.btn-error:hover,
+      .btn-outline.btn-error.btn-active {
+        @apply border-error bg-error text-error-content;
+      }
+  /* disabled */
+  .btn-disabled,
+  .btn-disabled:hover,
+  .btn[disabled],
+  .btn[disabled]:hover {
+    @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+  }
+  /* loading */
+  .btn.loading.btn-square:before,
+    .btn.loading.btn-circle:before {
+      @apply mr-0;
+    }
+  .btn.loading.btn-xl:before,
+    .btn.loading.btn-lg:before {
+      @apply h-5 w-5;
+    }
+  .btn.loading.btn-sm:before,
+    .btn.loading.btn-xs:before {
+      @apply h-3 w-3;
+    }
+/* group */
+.btn-group > input[type="radio"]:checked.btn,
+  .btn-group > .btn-active {
+    @apply border-primary bg-primary text-primary-content;
+  }
+.btn-group > input[type="radio"]:checked.btn:focus-visible, .btn-group > .btn-active:focus-visible {
+      outline: 2px solid hsl(var(--p));
+    }
+
+@keyframes button-pop {
+  0% {
+    transform: scale(var(--btn-focus-scale, 0.95));
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

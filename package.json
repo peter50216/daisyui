@@ -3,7 +3,7 @@
 	"version": "2.50.0",
 	"description": "Redistribution of daisyUI",
 	"scripts": {
-		"prepack": "deno task build && deno task bundle && deno task bundle-min"
+		"build": "deno task build && deno task bundle && deno task bundle-min"
 	},
 	"repository": "kidonng/daisyui",
 	"license": "MIT",
@@ -14,7 +14,6 @@
 		"full.css",
 		"full.min.css",
 		"index.css",
-		"themes",
 		"utilities"
 	],
 	"devDependencies": {

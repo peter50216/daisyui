@@ -1,0 +1,104 @@
+.toggle {
+  --tglbg: hsl(var(--b1));
+  --handleoffset: 1.5rem;
+  --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+  --togglehandleborder: 0 0;
+  @apply h-6 w-12 cursor-pointer appearance-none border border-base-content border-opacity-20 bg-base-content bg-opacity-50 duration-300 ease-in-out rounded-badge;
+  transition: background, box-shadow var(--animation-input, 0.2s) ease-in-out;
+  box-shadow: var(--handleoffsetcalculator) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset, var(--togglehandleborder);
+}
+  [dir="rtl"] .toggle {
+    --handleoffsetcalculator: calc(var(--handleoffset) * 1);
+  }
+  .toggle:focus-visible {
+    outline: 2px solid hsl(var(--bc));
+    outline-offset: 2px;
+  }
+  .toggle:checked,
+  .toggle[checked="true"],
+  .toggle[aria-checked=true] {
+    --handleoffsetcalculator: var(--handleoffset);
+    @apply border-opacity-100 bg-opacity-100;
+  }
+  [dir="rtl"] .toggle:checked, [dir="rtl"] .toggle[checked="true"], [dir="rtl"] .toggle[aria-checked=true] {
+      --handleoffsetcalculator: calc(var(--handleoffset) * -1);
+    }
+  .toggle:indeterminate {
+    @apply border-opacity-100 bg-opacity-100;
+    box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
+  }
+  [dir="rtl"] .toggle:indeterminate {
+      box-shadow: calc(var(--handleoffset) / 2) 0 0 2px var(--tglbg) inset, calc(var(--handleoffset) / -2) 0 0 2px var(--tglbg) inset, 0 0 0 2px var(--tglbg) inset;
+    }
+  .toggle-primary:focus-visible {
+      outline: 2px solid hsl(var(--p));
+    }
+  .toggle-primary:checked,
+    .toggle-primary[checked="true"],
+    .toggle-primary[aria-checked=true] {
+      @apply border-primary;
+      @apply border-primary border-opacity-10 bg-primary text-primary-content;
+    }
+  .toggle-secondary:focus-visible {
+      outline: 2px solid hsl(var(--s));
+    }
+  .toggle-secondary:checked,
+    .toggle-secondary[checked="true"],
+    .toggle-secondary[aria-checked=true] {
+      @apply border-secondary;
+      @apply border-secondary border-opacity-10 bg-secondary text-secondary-content;
+    }
+  .toggle-accent:focus-visible {
+      outline: 2px solid hsl(var(--a));
+    }
+  .toggle-accent:checked,
+    .toggle-accent[checked="true"],
+    .toggle-accent[aria-checked=true] {
+      @apply border-accent;
+      @apply border-accent border-opacity-10 bg-accent text-accent-content;
+    }
+  .toggle-success:focus-visible {
+      outline: 2px solid hsl(var(--su));
+    }
+  .toggle-success:checked,
+    .toggle-success[checked="true"],
+    .toggle-success[aria-checked=true] {
+      @apply border-success;
+      @apply border-success border-opacity-10 bg-success text-success-content;
+    }
+  .toggle-warning:focus-visible {
+      outline: 2px solid hsl(var(--wa));
+    }
+  .toggle-warning:checked,
+    .toggle-warning[checked="true"],
+    .toggle-warning[aria-checked=true] {
+      @apply border-warning;
+      @apply border-warning border-opacity-10 bg-warning text-warning-content;
+    }
+  .toggle-info:focus-visible {
+      outline: 2px solid hsl(var(--in));
+    }
+  .toggle-info:checked,
+    .toggle-info[checked="true"],
+    .toggle-info[aria-checked=true] {
+      @apply border-info;
+      @apply border-info border-opacity-10 bg-info text-info-content;
+    }
+  .toggle-error:focus-visible {
+      outline: 2px solid hsl(var(--er));
+    }
+  .toggle-error:checked,
+    .toggle-error[checked="true"],
+    .toggle-error[aria-checked=true] {
+      @apply border-error;
+      @apply border-error border-opacity-10 bg-error text-error-content;
+    }
+  .toggle:disabled {
+    @apply cursor-not-allowed bg-transparent border-base-content opacity-30;
+    --togglehandleborder: 0 0 0 3px hsl(var(--bc)) inset, var(--handleoffsetcalculator) 0 0 3px hsl(var(--bc)) inset;
+  }
+
+/* backward comptability */
+.toggle-mark {
+  @apply hidden;
+}

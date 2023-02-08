@@ -1,0 +1,68 @@
+.range-xs {
+    @apply h-4;
+  }
+    .range-xs::-webkit-slider-runnable-track {
+      @apply h-1;
+    }
+    .range-xs::-moz-range-track {
+      @apply h-1;
+    }
+    .range-xs::-webkit-slider-thumb {
+      @apply h-4 w-4;
+      --filler-offset: 0.4rem;
+    }
+    .range-xs::-moz-range-thumb {
+      @apply h-4 w-4;
+      --filler-offset: 0.4rem;
+    }
+  .range-sm {
+    @apply h-5;
+  }
+  .range-sm::-webkit-slider-runnable-track {
+      @apply h-1;
+    }
+  .range-sm::-moz-range-track {
+      @apply h-1;
+    }
+  .range-sm::-webkit-slider-thumb {
+      @apply h-5 w-5;
+      --filler-offset: 0.5rem;
+    }
+  .range-sm::-moz-range-thumb {
+      @apply h-5 w-5;
+      --filler-offset: 0.5rem;
+    }
+  .range-md {
+    @apply h-6;
+  }
+  .range-md::-webkit-slider-runnable-track {
+      @apply h-2;
+    }
+  .range-md::-moz-range-track {
+      @apply h-2;
+    }
+  .range-md::-webkit-slider-thumb {
+      @apply h-6 w-6;
+      --filler-offset: 0.6rem;
+    }
+  .range-md::-moz-range-thumb {
+      @apply h-6 w-6;
+      --filler-offset: 0.6rem;
+    }
+  .range-lg {
+    @apply h-8;
+  }
+  .range-lg::-webkit-slider-runnable-track {
+      @apply h-4;
+    }
+  .range-lg::-moz-range-track {
+      @apply h-4;
+    }
+  .range-lg::-webkit-slider-thumb {
+      @apply h-8 w-8;
+      --filler-offset: 1rem;
+    }
+  .range-lg::-moz-range-thumb {
+      @apply h-8 w-8;
+      --filler-offset: 1rem;
+    }

@@ -1,0 +1,18 @@
+.divider-horizontal {
+  @apply flex-col;
+}
+  .divider-horizontal:before {
+    @apply h-full w-0.5;
+  }
+  .divider-horizontal:after {
+    @apply h-full w-0.5;
+  }
+.divider-vertical {
+  @apply flex-row;
+}
+.divider-vertical:before {
+    @apply h-0.5 w-full;
+  }
+.divider-vertical:after {
+    @apply h-0.5 w-full;
+  }

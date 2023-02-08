@@ -1,0 +1,96 @@
+.file-input {
+  @apply border border-base-content border-opacity-0 bg-base-100 rounded-btn text-base overflow-hidden;
+}
+  .file-input::file-selector-button {
+    @apply font-semibold uppercase no-underline border-neutral bg-neutral text-neutral-content;
+    border-width: var(--border-btn, 1px);
+    animation: button-pop var(--animation-btn, 0.25s) ease-out;
+    text-transform: var(--btn-text-case, uppercase);
+  }
+  .file-input-bordered {
+    @apply border-opacity-20;
+  }
+  .file-input:focus {
+    outline: 2px solid hsla(var(--bc), 0.2);
+    outline-offset: 2px;
+  }
+  .file-input-ghost {
+    @apply bg-opacity-5;
+  }
+  .file-input-ghost:focus {
+      @apply bg-opacity-100 text-base-content;
+      box-shadow: none;
+    }
+  .file-input-ghost::file-selector-button {
+      @apply border border-transparent bg-transparent text-current;
+    }
+  .file-input-primary {
+    @apply border-primary;
+  }
+  .file-input-primary:focus {
+      outline: 2px solid hsl(var(--p));
+    }
+  .file-input-primary::file-selector-button {
+      @apply border-primary bg-primary text-primary-content;
+    }
+  .file-input-secondary {
+    @apply border-secondary;
+  }
+  .file-input-secondary:focus {
+      outline: 2px solid hsl(var(--s));
+    }
+  .file-input-secondary::file-selector-button {
+      @apply border-secondary bg-secondary text-secondary-content;
+    }
+  .file-input-accent {
+    @apply border-accent;
+  }
+  .file-input-accent:focus {
+      outline: 2px solid hsl(var(--a));
+    }
+  .file-input-accent::file-selector-button {
+      @apply border-accent bg-accent text-accent-content;
+    }
+  .file-input-info {
+    @apply border-info;
+  }
+  .file-input-info:focus {
+      outline: 2px solid hsl(var(--in));
+    }
+  .file-input-info::file-selector-button {
+      @apply border-info bg-info text-info-content;
+    }
+  .file-input-success {
+    @apply border-success;
+  }
+  .file-input-success:focus {
+      outline: 2px solid hsl(var(--su));
+    }
+  .file-input-success::file-selector-button {
+      @apply border-success bg-success text-success-content;
+    }
+  .file-input-warning {
+    @apply border-warning;
+  }
+  .file-input-warning:focus {
+      outline: 2px solid hsl(var(--wa));
+    }
+  .file-input-warning::file-selector-button {
+      @apply border-warning bg-warning text-warning-content;
+    }
+  .file-input-error {
+    @apply border-error;
+  }
+  .file-input-error:focus {
+      outline: 2px solid hsl(var(--er));
+    }
+  .file-input-error::file-selector-button {
+      @apply border-error bg-error text-error-content;
+    }
+  .file-input-disabled,
+  .file-input[disabled] {
+    @apply cursor-not-allowed border-base-200 bg-base-200 text-opacity-20 placeholder-base-content placeholder-opacity-20;
+  }
+  .file-input-disabled::file-selector-button, .file-input[disabled]::file-selector-button {
+      @apply border-opacity-0 bg-neutral bg-opacity-20 text-base-content text-opacity-20;
+    }

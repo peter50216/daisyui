@@ -1,0 +1,12 @@
+.avatar {
+  @apply relative inline-flex;
+}
+  .avatar > div {
+    @apply block aspect-square overflow-hidden;
+  }
+  .avatar img {
+    @apply h-full w-full object-cover;
+  }
+  .avatar.placeholder > div {
+      @apply flex items-center justify-center;
+    }

@@ -1,0 +1,90 @@
+.progress {
+  @apply h-2 rounded-box;
+}
+  .progress::-moz-progress-bar {
+    @apply bg-neutral;
+  }
+  .progress-primary::-moz-progress-bar {
+    @apply bg-primary;
+  }
+  .progress-secondary::-moz-progress-bar {
+    @apply bg-secondary;
+  }
+  .progress-accent::-moz-progress-bar {
+    @apply bg-accent;
+  }
+  .progress-info::-moz-progress-bar {
+    @apply bg-info;
+  }
+  .progress-success::-moz-progress-bar {
+    @apply bg-success;
+  }
+  .progress-warning::-moz-progress-bar {
+    @apply bg-warning;
+  }
+  .progress-error::-moz-progress-bar {
+    @apply bg-error;
+  }
+  .progress:indeterminate::after {
+    @apply bg-neutral;
+  }
+  .progress-primary:indeterminate::after {
+    @apply bg-primary;
+  }
+  .progress-secondary:indeterminate::after {
+    @apply bg-secondary;
+  }
+  .progress-accent:indeterminate::after {
+    @apply bg-accent;
+  }
+  .progress-info:indeterminate::after {
+    @apply bg-info;
+  }
+  .progress-success:indeterminate::after {
+    @apply bg-success;
+  }
+  .progress-warning:indeterminate::after {
+    @apply bg-warning;
+  }
+  .progress-error:indeterminate::after {
+    @apply bg-error;
+  }
+  .progress::-webkit-progress-bar {
+    @apply bg-neutral bg-opacity-20 rounded-box;
+  }
+  .progress::-webkit-progress-value {
+    @apply bg-neutral-focus rounded-box;
+  }
+  .progress-primary::-webkit-progress-value {
+    @apply bg-primary;
+  }
+  .progress-secondary::-webkit-progress-value {
+    @apply bg-secondary;
+  }
+  .progress-accent::-webkit-progress-value {
+    @apply bg-accent;
+  }
+  .progress-info::-webkit-progress-value {
+    @apply bg-info;
+  }
+  .progress-success::-webkit-progress-value {
+    @apply bg-success;
+  }
+  .progress-warning::-webkit-progress-value {
+    @apply bg-warning;
+  }
+  .progress-error::-webkit-progress-value {
+    @apply bg-error;
+  }
+
+.progress:indeterminate::after {
+  content: "";
+  @apply inset-y-0 -left-[40%] w-1/3 absolute rounded-box;
+  animation: progress-loading 5s infinite ease-in-out;
+}
+
+@keyframes progress-loading {
+  50% {
+    left: 107%;
+  }
+}

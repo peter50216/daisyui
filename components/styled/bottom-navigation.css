@@ -1,0 +1,26 @@
+.btm-nav {
+  @apply h-16 bg-base-100 text-current;
+
+}
+  .btm-nav>* {
+    @apply border-current;
+  }
+  .btm-nav>*:not(.active) {
+      @apply pt-0.5;
+    }
+  /* active */
+  .btm-nav>*:where(.active) {
+      @apply bg-base-100 border-t-2;
+    }
+  /* disabled */
+  .btm-nav>*.disabled,
+    .btm-nav>*.disabled:hover,
+    .btm-nav>*[disabled],
+    .btm-nav>*[disabled]:hover {
+      @apply border-opacity-0 bg-neutral bg-opacity-10 text-base-content text-opacity-20 pointer-events-none;
+    }
+  .btm-nav>* .label {
+      @apply text-base;
+    }
+
+

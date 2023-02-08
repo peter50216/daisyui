@@ -1,0 +1,9 @@
+.footer {
+  @apply gap-y-10 gap-x-4 text-sm;
+}
+  .footer > * {
+    @apply gap-2;
+  }
+  .footer-title {
+    @apply mb-2 font-bold uppercase opacity-50;
+  }

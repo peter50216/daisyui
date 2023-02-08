@@ -1,0 +1,28 @@
+.stats {
+  @apply inline-grid;
+}
+:where(.stats) {
+  @apply grid-flow-col;
+}
+.stat {
+  @apply inline-grid w-full;
+  grid-template-columns: repeat(1, 1fr);
+}
+.stat-figure {
+    @apply col-start-2 row-span-3 row-start-1 place-self-center justify-self-end;
+  }
+.stat-title {
+    @apply col-start-1 whitespace-nowrap;
+  }
+.stat-value {
+    @apply col-start-1 whitespace-nowrap;
+  }
+.stat-desc {
+    @apply col-start-1 whitespace-nowrap;
+  }
+.stat-actions {
+    @apply col-start-1 whitespace-nowrap;
+  }
+/* .stats.grid-flow-row {
+  @apply auto-rows-fr;
+} */
